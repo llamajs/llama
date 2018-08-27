@@ -1,10 +1,9 @@
 {
   "extends": "tslint-config-airbnb",
-  // rules override:
   "rules": {
     "no-increment-decrement" : false,
-    "import-name": false, // 23.6,
-    "max-line-length": [true, 90],  // 18.12   We can debate about that...
+    "import-name": false,
+    "max-line-length": [true, 90],
     "variable-name": [true, "ban-keywords", "check-format", "allow-snake-case", "allow-leading-underscore", "allow-pascal-case"],
     "ter-indent": [true, 4, { "SwitchCase": 1 }],
     "ter-prefer-arrow-callback": false
