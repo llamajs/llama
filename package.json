@@ -1,0 +1,30 @@
+{
+  "name": "llama",
+  "version": "0.0.0",
+  "description": "A dynamic logger for the dynamic developer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llamajs/llama.git"
+  },
+  "keywords": [
+    "Logger",
+    "Logs",
+    "js",
+    "typescript",
+    "llama",
+    "llamajs",
+    "llamalogger",
+    "llamalog",
+    "llamalogs"
+  ],
+  "author": "Almog Vagman Ciprut",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/llamajs/llama/issues"
+  },
+  "homepage": "https://github.com/llamajs/llama#readme"
+}
