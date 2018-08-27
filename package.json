@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/llamajs/llama/issues"
   },
-  "homepage": "https://github.com/llamajs/llama#readme"
+  "homepage": "https://github.com/llamajs/llama#readme",
+  "devDependencies": {
+    "tslint-config-airbnb": "^5.10.0"
+  }
 }
