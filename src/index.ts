@@ -1,7 +1,7 @@
 import { Logger } from './models/logger';
 import { ConsoleTransport } from './transports/console.transport';
 import { defaultSeverityLevels } from './defaults/severityLevels';
-import { LineFormat, JsonFormat } from './formats/formats';
+import { LineFormat, JsonFormat, CsvFormat } from './formats/formats';
 import { LogMessage } from './models/logMessage';
 import { LoggerConfig } from './models/loggerConfig';
 import { Transport } from './models/transport';
@@ -12,7 +12,7 @@ import { RabbitMqMessageConfig } from './transports/rabbitMq.message.config';
 const transports: Transport[] = [];
 transports.push(new ConsoleTransport({
     levels: [defaultSeverityLevels.Info, defaultSeverityLevels.Error],
-    format: new LineFormat,
+    format: new CsvFormat,
 }));
 
 transports.push(new RabbitMqTransport({

@@ -12,3 +12,9 @@ export class LineFormat implements Format {
         return ((<any>Object).values(logMessage)).join(' - ');
     }
 }
+
+export class CsvFormat implements Format {
+    getMessage(logMessage: LogMessage) {
+        return ((<any>Object).values(logMessage)).join(',');
+    }
+}
