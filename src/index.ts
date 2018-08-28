@@ -8,11 +8,13 @@ import { Transport } from './transports/transport';
 import { RabbitMqTransport } from './transports/rabbitMQ/rabbitMQ.transport';
 import { RabbitMqConfig } from './transports/rabbitMQ/rabbitMQ.transport.config';
 import { RabbitMqMessageConfig } from './transports/rabbitMQ/rabbitMQ.message.config';
+import { FileTransportConfig } from './transports/file/file.transport.config';
+import { FileTransport } from './transports/file/file.transport';
 
 const transports: Transport[] = [];
 transports.push(new ConsoleTransport({
     levels: [defaultSeverityLevels.Info, defaultSeverityLevels.Error],
-    format: new CsvFormat,
+    format: new LineFormat,
 }));
 
 transports.push(new RabbitMqTransport({
@@ -28,6 +30,12 @@ transports.push(new RabbitMqTransport({
     username: 'guest',
 
 } as RabbitMqConfig));
+
+transports.push(new FileTransport({
+    format: new CsvFormat,
+    levels: [defaultSeverityLevels.Info, defaultSeverityLevels.Error],
+    fileName: 'logs_test.txt',
+} as FileTransportConfig));
 
 const loggerConfig: LoggerConfig = {
     transports,
