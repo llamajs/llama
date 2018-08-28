@@ -38,7 +38,7 @@ export class Logger {
         });
     }
 
-    public log(logMessage: LogMessage, messageConfig: any) {
+    public log(logMessage: LogMessage, messageConfig?: any) {
         this.sendToTransports(logMessage, messageConfig);
     }
 }
