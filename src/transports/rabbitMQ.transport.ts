@@ -68,7 +68,7 @@ export class RabbitMqTransport extends Transport {
 
     }
 
-    pass(message: string, messageConfig: RabbitMqMessageConfig): void {
+    protected pass(message: string, messageConfig: RabbitMqMessageConfig): void {
         this.publish(message, messageConfig.routingKey);
     }
 

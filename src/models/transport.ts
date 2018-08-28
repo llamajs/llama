@@ -19,5 +19,5 @@ export abstract class Transport {
         }
     }
 
-    public abstract pass(message: string, messageConfig?: any): void;
+    protected abstract pass(message: string, messageConfig?: any): void;
 }
