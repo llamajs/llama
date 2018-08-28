@@ -1,5 +1,5 @@
 import { JsonFormat } from '../formats/formats';
-import { defaultSeverityLevels } from './severityLevels';
+import { defaultSeverityLevels } from '../severityLevels/severityLevels';
 
 export const defaultLoggerConfig = {
     transports: [],

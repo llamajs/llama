@@ -1,4 +1,4 @@
-import { Transport } from '../models/transport';
+import { Transport } from './transport';
 import * as amqp from 'amqplib';
 import { RabbitMqConfig } from './transportConfigs';
 import { RabbitMqMessageConfig } from './rabbitMQ.message.config';

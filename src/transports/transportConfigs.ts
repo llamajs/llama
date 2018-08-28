@@ -1,6 +1,6 @@
-import { defaultSeverityLevels } from '../defaults/severityLevels';
+import { defaultSeverityLevels } from '../severityLevels/severityLevels';
 import { LineFormat } from '../formats/formats';
-import { TransportConfig } from '../models/transportConfig';
+import { TransportConfig } from '../transports/transportConfig';
 
 export const defaultTransportConfig: TransportConfig = {
     levels: (<any>Object).values(defaultSeverityLevels),

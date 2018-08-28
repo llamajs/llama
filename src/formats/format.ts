@@ -1,4 +1,4 @@
-import { LogMessage } from '../models/logMessage';
+import { LogMessage } from '../messages/logMessage';
 
 export interface Format {
     getMessage(logMessage: LogMessage): string;

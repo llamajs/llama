@@ -1,4 +1,4 @@
-import { Transport } from '../models/transport';
+import { Transport } from '../transports/transport';
 
 export class ConsoleTransport extends Transport {
     protected pass(message: string): void {

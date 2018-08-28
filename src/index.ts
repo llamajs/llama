@@ -1,10 +1,10 @@
-import { Logger } from './models/logger';
+import { Logger } from './logger/logger';
 import { ConsoleTransport } from './transports/console.transport';
-import { defaultSeverityLevels } from './defaults/severityLevels';
+import { defaultSeverityLevels } from './severityLevels/severityLevels';
 import { LineFormat, JsonFormat, CsvFormat } from './formats/formats';
-import { LogMessage } from './models/logMessage';
-import { LoggerConfig } from './models/loggerConfig';
-import { Transport } from './models/transport';
+import { LogMessage } from './messages/logMessage';
+import { LoggerConfig } from './logger/loggerConfig';
+import { Transport } from './transports/transport';
 import { RabbitMqTransport } from './transports/rabbitMQ.transport';
 import { RabbitMqConfig } from './transports/transportConfigs';
 import { RabbitMqMessageConfig } from './transports/rabbitMq.message.config';

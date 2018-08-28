@@ -1,4 +1,4 @@
-import { LogMessage } from './logMessage';
+import { LogMessage } from '../messages/logMessage';
 import { TransportConfig } from './transportConfig';
 import { defaultTransportConfig } from '../transports/transportConfigs';
 

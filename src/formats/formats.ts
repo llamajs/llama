@@ -1,4 +1,4 @@
-import { LogMessage } from '../models/logMessage';
+import { LogMessage } from '../messages/logMessage';
 import { Format } from './format';
 
 export class JsonFormat implements Format {

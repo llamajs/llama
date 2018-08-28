@@ -1,6 +1,6 @@
-import { LogMessage } from './logMessage';
+import { LogMessage } from '../messages/logMessage';
 import { LoggerConfig } from './loggerConfig';
-import { defaultLoggerConfig } from '../defaults/loggerConfigs';
+import { defaultLoggerConfig } from './loggerConfigs';
 
 export class Logger {
     private config!: LoggerConfig;

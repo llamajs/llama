@@ -1,4 +1,4 @@
-import { Transport } from './transport';
+import { Transport } from '../transports/transport';
 
 export type LoggerConfig = {
     transports: Transport[];
