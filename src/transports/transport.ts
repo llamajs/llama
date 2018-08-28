@@ -1,6 +1,6 @@
 import { LogMessage } from '../messages/logMessage';
 import { TransportConfig } from './transportConfig';
-import { defaultTransportConfig } from '../transports/transportConfigs';
+import { defaultTransportConfig } from './default.transport.config';
 
 export abstract class Transport {
     config!: TransportConfig;

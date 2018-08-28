@@ -5,9 +5,9 @@ import { LineFormat, JsonFormat, CsvFormat } from './formats/formats';
 import { LogMessage } from './messages/logMessage';
 import { LoggerConfig } from './logger/loggerConfig';
 import { Transport } from './transports/transport';
-import { RabbitMqTransport } from './transports/rabbitMQ.transport';
-import { RabbitMqConfig } from './transports/transportConfigs';
-import { RabbitMqMessageConfig } from './transports/rabbitMq.message.config';
+import { RabbitMqTransport } from './transports/rabbitMQ/rabbitMQ.transport';
+import { RabbitMqConfig } from './transports/rabbitMQ/rabbitMQ.transport.config';
+import { RabbitMqMessageConfig } from './transports/rabbitMQ/rabbitMQ.message.config';
 
 const transports: Transport[] = [];
 transports.push(new ConsoleTransport({
