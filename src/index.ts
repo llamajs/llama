@@ -31,7 +31,6 @@ transports.push(new RabbitMqTransport({
 
 const loggerConfig: LoggerConfig = {
     transports,
-    format: new LineFormat,
     levels: (<any>Object).values(defaultSeverityLevels),
 };
 
