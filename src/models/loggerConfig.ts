@@ -1,4 +1,4 @@
-import { Format } from './format';
+import { Format } from '../formats/format';
 import { Transport } from './transport';
 
 export type LoggerConfig = {

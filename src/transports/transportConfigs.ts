@@ -1,5 +1,5 @@
 import { defaultSeverityLevels } from '../defaults/severityLevels';
-import { LineFormat } from '../defaults/formats';
+import { LineFormat } from '../formats/formats';
 import { TransportConfig } from '../models/transportConfig';
 
 export const defaultTransportConfig: TransportConfig = {

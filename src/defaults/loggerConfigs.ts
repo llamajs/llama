@@ -1,4 +1,4 @@
-import { JsonFormat } from './formats';
+import { JsonFormat } from '../formats/formats';
 import { defaultSeverityLevels } from './severityLevels';
 
 export const defaultLoggerConfig = {

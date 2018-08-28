@@ -1,4 +1,4 @@
-import { Format } from './format';
+import { Format } from '../formats/format';
 
 export interface TransportConfig {
     levels: string[];

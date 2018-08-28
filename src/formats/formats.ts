@@ -1,5 +1,5 @@
 import { LogMessage } from '../models/logMessage';
-import { Format } from '../models/format';
+import { Format } from './format';
 
 export class JsonFormat implements Format {
     getMessage(logMessage: LogMessage) {

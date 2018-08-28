@@ -1,7 +1,7 @@
 import { Logger } from './models/logger';
 import { ConsoleTransport } from './transports/console.transport';
 import { defaultSeverityLevels } from './defaults/severityLevels';
-import { LineFormat, JsonFormat } from './defaults/formats';
+import { LineFormat, JsonFormat } from './formats/formats';
 import { LogMessage } from './models/logMessage';
 import { LoggerConfig } from './models/loggerConfig';
 import { Transport } from './models/transport';
