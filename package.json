@@ -1,5 +1,5 @@
 {
-  "name": "llama",
+  "name": "llamajs",
   "version": "0.0.0",
   "description": "A dynamic logger for the dynamic developer",
   "main": "index.js",
