@@ -35,5 +35,14 @@ const loggerConfig: LoggerConfig = {
 };
 
 const logger: Logger = new Logger(loggerConfig);
-const message: LogMessage = new LogMessage(defaultSeverityLevels.Info, 'test');
-logger.log(message, { routingKey: 'a.b.c' } as RabbitMqMessageConfig);
+const message: LogMessage = {
+    severity: defaultSeverityLevels.Info,
+    name: 'test',
+    description: 'A not very helpful description',
+};
+
+const messageConfig: RabbitMqMessageConfig = {
+    routingKey: `${message.severity}.${message.name}`,
+};
+
+logger.log(message, messageConfig);
