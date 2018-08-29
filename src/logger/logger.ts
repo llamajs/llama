@@ -41,4 +41,10 @@ export class Logger {
     public log(logMessage: LogMessage, messageConfig?: any) {
         this.sendToTransports(logMessage, messageConfig);
     }
+
+    public close() {
+        this.config.transports.forEach((transport) => {
+            transport.close();
+        });
+    }
 }
