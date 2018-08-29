@@ -22,15 +22,8 @@ export class LineFormat extends Format {
 }
 
 export class CsvFormat extends LineFormat {
-    constructor(config?: formatConfig) {
+    constructor(config: formatConfig) {
         super(config);
         this.config.columnDelimiter = ',';
-    }
-
-    getMessage(logMessage: LogMessage) {
-        const message: string = ((<any>Object).values(logMessage)).join(',');
-        const rowDeli: string = this.config.rowDelimiter || '';
-
-        return `${message}${rowDeli}`;
     }
 }
