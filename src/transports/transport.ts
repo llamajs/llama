@@ -19,5 +19,7 @@ export abstract class Transport {
         }
     }
 
+    public close(): void {}
+
     protected abstract pass(message: string, messageConfig?: any): void;
 }
