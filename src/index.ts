@@ -34,7 +34,13 @@ transports.push(new RabbitMqTransport({
 transports.push(new FileTransport({
     format: new CsvFormat,
     levels: [defaultSeverityLevels.Info, defaultSeverityLevels.Error],
-    fileName: 'logs_test.txt',
+    fileName: 'logs_csv_test.txt',
+} as FileTransportConfig));
+
+transports.push(new FileTransport({
+    format: new JsonFormat({ rowDelimiter: ',' }),
+    levels: [defaultSeverityLevels.Info, defaultSeverityLevels.Error],
+    fileName: 'logs_json_test.txt',
 } as FileTransportConfig));
 
 const loggerConfig: LoggerConfig = {

@@ -1,20 +1,29 @@
 import { LogMessage } from '../messages/logMessage';
 import { Format } from './format';
+import { formatConfig } from './format.config';
 
-export class JsonFormat implements Format {
+export class JsonFormat extends Format {
     getMessage(logMessage: LogMessage) {
-        return JSON.stringify(logMessage);
+        const message: string = JSON.stringify(logMessage);
+        const rowDeli: string = this.config.rowDelimiter || '';
+
+        return `${message}${rowDeli}`;
     }
 }
 
-export class LineFormat implements Format {
+export class LineFormat extends Format {
     getMessage(logMessage: LogMessage) {
-        return ((<any>Object).values(logMessage)).join(' - ');
+        const message: string = ((<any>Object).values(logMessage))
+            .join(this.config.columnDelimiter || ',');
+        const rowDeli: string = this.config.rowDelimiter || '';
+
+        return `${message}${rowDeli}`;
     }
 }
 
-export class CsvFormat implements Format {
-    getMessage(logMessage: LogMessage) {
-        return ((<any>Object).values(logMessage)).join(',');
+export class CsvFormat extends LineFormat {
+    constructor(config: formatConfig) {
+        super(config);
+        this.config.columnDelimiter = ',';
     }
 }
