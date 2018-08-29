@@ -27,6 +27,10 @@ export class RabbitMqTransport extends Transport {
         return connection;
     }
 
+    public async close() {
+        this.amqpConnection.close();
+    }
+
     private async startPublisher() {
         if (!this.amqpConnection) {
             throw new Error('[RabbitMQ]: connection is not open');
