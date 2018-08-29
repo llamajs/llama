@@ -42,9 +42,11 @@ export class Logger {
         this.sendToTransports(logMessage, messageConfig);
     }
 
-    public close() {
+    public removeTransports() {
         this.config.transports.forEach((transport) => {
             transport.close();
         });
+
+        this.config.transports = [];
     }
 }
