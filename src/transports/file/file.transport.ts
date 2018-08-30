@@ -11,7 +11,9 @@ export class FileTransport extends Transport {
     }
 
     protected pass(message: string): void {
-        fs.appendFile(this.config.fileName, `${message}\n`, (error) => {
+        const lineEnd = this.config.noNewLine ? '' : '\n';
+
+        fs.appendFile(this.config.fileName, `${message}${lineEnd}`, (error) => {
             if (error) {
                 throw new Error(`[FileTransport]: ${error.message}`);
             }
