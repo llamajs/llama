@@ -32,9 +32,10 @@ transports.push(new RabbitMqTransport({
 } as RabbitMqConfig));
 
 transports.push(new FileTransport({
-    format: new CsvFormat,
+    format: new CsvFormat({}),
     levels: [defaultSeverityLevels.Info, defaultSeverityLevels.Error],
     fileName: 'logs_csv_test.txt',
+    noNewLine: true,
 } as FileTransportConfig));
 
 transports.push(new FileTransport({
