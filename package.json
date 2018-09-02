@@ -34,7 +34,11 @@
   "homepage": "https://github.com/llamajs/llama#readme",
   "devDependencies": {
     "@types/amqplib": "^0.5.8",
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
     "@types/node": "^10.9.2",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
     "nyc": "^12.0.2",
     "standard-version": "^4.4.0",
     "ts-node": "^7.0.1",
