@@ -6,8 +6,9 @@
   "types": "dist/index.d.js",
   "scripts": {
     "start": "tsc && set NODE_ENV=production&& node ./dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --recursive ./dist/**/*.spec.js --exit",
     "build": "tsc",
+    "pretest": "tsc",
     "release": "standard-version",
     "prepare": "npm run build"
   },
