@@ -7,7 +7,7 @@ export type SeverityLevels = {
     [key: string]: SeverityLevel,
 };
 
-export const IbmTivoliSeverityLevels: SeverityLevels = {
+export const IbmTivoliSeverityLevels = {
     Clear: {
         name: 'CLEAR',
         color: 'Green',
@@ -34,7 +34,7 @@ export const IbmTivoliSeverityLevels: SeverityLevels = {
     },
 };
 
-export const syslogSeverityLevels: SeverityLevels = {
+export const syslogSeverityLevels = {
     Debug: {
         name: 'DEBUG',
     },
