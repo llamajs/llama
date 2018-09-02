@@ -1,7 +1,11 @@
-export type SeverityLevels = {
-    [key: string]: {
+export type SeverityLevel = {
         name: number | string,
         color?: string,
+};
+
+export type SeverityLevels = {
+    [key: string]: SeverityLevel,
+};
     },
 };
 export enum defaultSeverityLevels {
