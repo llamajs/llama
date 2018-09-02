@@ -19,12 +19,12 @@ export class Logger {
     }
 
     private isConfigValid(config: LoggerConfig): boolean {
-        for (let transportIndex = 0; transportIndex < config.transports.length;
-            transportIndex++) {
-            const transportLevels = config.transports[transportIndex].config.levels;
-            const loggerLevels = config.levels;
+        for (let transIndex = 0; transIndex < config.transports.length; transIndex++) {
+            const transportSeverityLevels = config.transports[transIndex].config.levels;
+            const loggerSeverityLevels = config.levels;
 
-            if (!transportLevels.every(level => loggerLevels.includes(level))) {
+            if (!transportSeverityLevels.every(severityLevel =>
+                (<any>Object).values(loggerSeverityLevels).includes(severityLevel))) {
                 return false;
             }
         }

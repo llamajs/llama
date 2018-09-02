@@ -1,8 +1,8 @@
 import { JsonFormat } from '../formats/formats';
-import { defaultSeverityLevels } from '../severityLevels/severityLevels';
+import { syslogSeverityLevels } from '../severityLevels/severityLevels';
 
 export const defaultLoggerConfig = {
     transports: [],
-    levels: (<any>Object).values(defaultSeverityLevels),
+    levels: syslogSeverityLevels,
     format: new JsonFormat,
 };
