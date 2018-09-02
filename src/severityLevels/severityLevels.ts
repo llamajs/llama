@@ -1,3 +1,9 @@
+export type SeverityLevels = {
+    [key: string]: {
+        name: number | string,
+        color?: string,
+    },
+};
 export enum defaultSeverityLevels {
     Debug = 'DEBUG',
     Info = 'INFO',
