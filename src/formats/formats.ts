@@ -22,7 +22,7 @@ export class LineFormat extends Format {
 }
 
 export class CsvFormat extends LineFormat {
-    constructor(config: formatConfig) {
+    constructor(config?: formatConfig) {
         super(config);
         this.config.columnDelimiter = ',';
     }

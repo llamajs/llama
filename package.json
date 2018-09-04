@@ -6,8 +6,9 @@
   "types": "dist/index.d.js",
   "scripts": {
     "start": "tsc && set NODE_ENV=production&& node ./dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --recursive ./dist/**/*.spec.js --exit",
     "build": "tsc",
+    "pretest": "tsc",
     "release": "standard-version",
     "prepare": "npm run build"
   },
@@ -34,7 +35,13 @@
   "homepage": "https://github.com/llamajs/llama#readme",
   "devDependencies": {
     "@types/amqplib": "^0.5.8",
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "@types/mock-fs": "^3.6.30",
     "@types/node": "^10.9.2",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "mock-fs": "^4.6.0",
     "nyc": "^12.0.2",
     "standard-version": "^4.4.0",
     "ts-node": "^7.0.1",

@@ -13,13 +13,13 @@ export abstract class Transport {
         this.config = config;
     }
 
-    public send(message: LogMessage, messageConfig?: any): void {
+    public send(message: LogMessage, messageConfig?: any) {
         if (this.config.levels.includes(message.severity)) {
-            this.pass(this.config.format.getMessage(message), messageConfig);
+            return this.pass(this.config.format.getMessage(message), messageConfig);
         }
     }
 
     public close(): void {}
 
-    protected abstract pass(message: string, messageConfig?: any): void;
+    protected abstract pass(message: string, messageConfig?: any): Promise<any> | void;
 }

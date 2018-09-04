@@ -1,62 +1,25 @@
-export type SeverityLevel = {
-    name: number | string,
-    color?: string,
-};
+export type SeverityLevel = number | string;
 
 export type SeverityLevels = {
     [key: string]: SeverityLevel,
 };
 
-export const IbmTivoliSeverityLevels: SeverityLevels = {
-    Clear: {
-        name: 'CLEAR',
-        color: 'Green',
-    },
-    Indeterminate: {
-        name: 'INDETERMINATE',
-        color: 'Purple',
-    },
-    Warning: {
-        name: 'WARNING',
-        color: 'Blue',
-    },
-    Minor: {
-        name: 'MINOR',
-        color: 'Yellow',
-    },
-    Major: {
-        name: 'MAJOR',
-        color: 'ORANGE',
-    },
-    Critical: {
-        name: 'CRITICAL',
-        color: 'Red',
-    },
+export const IbmTivoliSeverityLevels = {
+    Clear: 'CLEAR',
+    Indeterminate: 'INDETERMINATE',
+    Warning: 'WARNING',
+    Minor: 'MINOR',
+    Major: 'MAJOR',
+    Critical: 'CRITICAL',
 };
 
-export const syslogSeverityLevels: SeverityLevels = {
-    Debug: {
-        name: 'DEBUG',
-    },
-    Informational: {
-        name: 'INFO',
-    },
-    Notice: {
-        name: 'NOTICE',
-    },
-    Warning: {
-        name: 'WARNING',
-    },
-    Error: {
-        name: 'ERROR',
-    },
-    Critical: {
-        name: 'CRITICAL',
-    },
-    Alert: {
-        name: 'ALERT',
-    },
-    Emergency: {
-        name: 'EMERGENCY',
-    },
+export const syslogSeverityLevels = {
+    Debug: 'DEBUG',
+    Informational: 'INFO',
+    Notice: 'NOTICE',
+    Warning: 'WARNING',
+    Error: 'ERROR',
+    Critical: 'CRITICAL',
+    Alert: 'ALERT',
+    Emergency: 'EMERGENCY',
 };
