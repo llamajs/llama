@@ -80,11 +80,11 @@ describe('File Transport Module', function () {
                      async function () {
                          await fileTransport.send(validInfoMessage);
                          await fileTransport.send(validAlertMessage);
- 
+
                          const fileStringArray = fs.readFileSync(fileName, 'UTF8')
                              .toString()
                              .split('\n');
- 
+
                          expect(fileStringArray[0])
                              .to
                              .equal(new CsvFormat().getMessage(validInfoMessage));
