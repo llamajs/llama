@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/llamajs/llama/compare/v0.1.0...v0.2.0) (2018-09-04)
+
+
+### Bug Fixes
+
+* Add new severity type to transport config ([d2f2418](https://github.com/llamajs/llama/commit/d2f2418))
+* Change severity from string to SeverityLevel type ([4cc09b6](https://github.com/llamajs/llama/commit/4cc09b6))
+
+
+### Features
+
+* **Severity levels:** Add syslog and ibm tivolid severity levels ([2bafad2](https://github.com/llamajs/llama/commit/2bafad2))
+
+
+
 <a name="0.1.0"></a>
 # 0.1.0 (2018-08-30)
 
