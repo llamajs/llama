@@ -39,7 +39,7 @@ export class RabbitMqTransport extends Transport {
 
             channel.assertExchange(
                 this.config.exchange,
-                this.config.exchanegType,
+                this.config.exchangeType,
                 { durable: true });
 
             channel.on('error', (error) => {
