@@ -14,10 +14,9 @@ Llama is aspiring to be a dynamic logger that will be suitable for most javascri
 Formats are the structure of the log message.
 
 The defined formats are:
-1. JSON Format - The message will be structured as JSON.
-2. Line Format -  The message will be outputed as a single line of text
-3. 
-4. CSV Format
+1. `JSON Format` - The message will be structured as JSON.
+2. `Line Format` - The message will be outputed as a single line of text, formated by the specified rowDelimiter and columnDelimiter. Default values match the *CSV Format*
+3. `CSV Format` -  A line format with a csv config (rowDelimiter of new-line and column delimiter of ',')
 
 ## Transports
 Transports are the outputs of the logger.
