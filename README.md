@@ -113,3 +113,44 @@ This configuration will define a console transport with a JSON format that will 
 The logger will be initiated with this transport and the `syslogSeverityLevels`.
 
 When the log function is called, it sends the specified message to the console transport. Because the message contains a severity level that the transport is set to accept, it will print it to the console.
+
+### RabbitMQ Transport Example
+
+```typescript
+import * as llama from "llamajs";
+import {
+  JsonFormat,
+  RabbitMqTransport,
+  LoggerConfig,
+  syslogSeverityLevels
+} from "llamajs";
+
+const transport: RabbitMqTransport = new RabbitMqTransport({
+  username: "guest",
+  password: "guest",
+  exchange: {
+    name: "application-logger",
+    type: "topic"
+  },
+  format: new JsonFormat(),
+  host: "localhost",
+  levels: Object.values(llama.syslogSeverityLevels),
+  persistent: true,
+  port: 5672
+});
+
+const config: LoggerConfig = {
+  levels: syslogSeverityLevels,
+  transports: [transport]
+};
+
+const logger: llama.Logger = new llama.Logger(config);
+
+logger.log(
+  {
+    severity: syslogSeverityLevels.Informational,
+    name: "Test Message"
+  },
+  { routingKey: `testService.log.info` }
+);
+```
