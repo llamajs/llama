@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2018",
+    "target": "es2019",
     "module": "commonjs",
     "sourceMap": true,
     "outDir": "dist",
@@ -8,12 +8,8 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "allowSyntheticDefaultImports": true,
-    "declaration": true,
+    "declaration": true
   },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
