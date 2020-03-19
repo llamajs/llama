@@ -154,3 +154,52 @@ logger.log(
   { routingKey: `testService.log.info` }
 );
 ```
+
+### Using multiple transports
+
+```typescript
+import * as llama from "llamajs";
+import {
+  JsonFormat,
+  RabbitMqTransport,
+  LoggerConfig,
+  syslogSeverityLevels,
+  ConsoleTransport,
+  LineFormat,
+  CsvFormat
+} from "llamajs";
+
+const rabbitMqTransport: RabbitMqTransport = new RabbitMqTransport({
+  username: "guest",
+  password: "guest",
+  exchange: {
+    name: "application-logger",
+    type: "topic"
+  },
+  format: new JsonFormat(),
+  host: "localhost",
+  levels: Object.values(llama.syslogSeverityLevels),
+  persistent: true,
+  port: 5672
+});
+
+const consoleTransport: ConsoleTransport = new ConsoleTransport({
+  format: new CsvFormat(),
+  levels: [syslogSeverityLevels.Debug]
+});
+
+const config: LoggerConfig = {
+  levels: syslogSeverityLevels,
+  transports: [rabbitMqTransport, consoleTransport]
+};
+
+const logger: llama.Logger = new llama.Logger(config);
+
+logger.log(
+  {
+    severity: syslogSeverityLevels.Debug,
+    name: "Test Message"
+  },
+  { routingKey: `testService.log.debug` }
+);
+```
