@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/llamajs/llama/compare/v0.2.1...v0.3.0) (2020-03-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* **RabbitMQ Transport:** change rabbitMQ config to support all features of amqp exchange, furthermore, change name and type of exchange location in config
+
+* **RabbitMQ Transport:** change config format ([26d3712](https://github.com/llamajs/llama/commit/26d3712bfe478d8d6b97d22ac6b04d6b28161236))
+
 ### [0.2.1](https://github.com/llamajs/llama/compare/v0.2.0...v0.2.1) (2020-03-19)
 
 
