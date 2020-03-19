@@ -38,9 +38,9 @@ export class RabbitMqTransport extends Transport {
             const channel = await this.amqpConnection.createChannel();
 
             channel.assertExchange(
-                this.config.exchange,
-                this.config.exchangeType,
-                { durable: true });
+                this.config.exchange.name,
+                this.config.exchange.type,
+                this.config.exchange.options);
 
             channel.on('error', (error) => {
                 throw new Error(`[RabbitMQ] channel error: ${error.message}`);
@@ -61,7 +61,7 @@ export class RabbitMqTransport extends Transport {
 
         try {
             this.amqpChannel.publish(
-                this.config.exchange,
+                this.config.exchange.name,
                 routingKey || '',
                 Buffer.from(message),
                 { persistent: this.config.persistent });
