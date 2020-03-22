@@ -1,6 +1,6 @@
 {
   "name": "llamajs",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A dynamic logger for the dynamic developer",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
