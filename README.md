@@ -145,14 +145,15 @@ const config: LoggerConfig = {
 };
 
 const logger: llama.Logger = new llama.Logger(config);
-
-logger.log(
-  {
-    severity: syslogSeverityLevels.Informational,
-    name: "Test Message"
-  },
-  { routingKey: `testService.log.info` }
-);
+logger.init().then(res => {
+  logger.log(
+    {
+      severity: syslogSeverityLevels.Informational,
+      name: "Test Message"
+    },
+    { routingKey: `testService.log.info` }
+  );
+});
 ```
 
 ### Using multiple transports
@@ -194,12 +195,13 @@ const config: LoggerConfig = {
 };
 
 const logger: llama.Logger = new llama.Logger(config);
-
-logger.log(
-  {
-    severity: syslogSeverityLevels.Debug,
-    name: "Test Message"
-  },
-  { routingKey: `testService.log.debug` }
-);
+logger.init().then(res => {
+  logger.log(
+    {
+      severity: syslogSeverityLevels.Debug,
+      name: "Test Message"
+    },
+    { routingKey: `testService.log.debug` }
+  );
+});
 ```
