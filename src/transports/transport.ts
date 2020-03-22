@@ -19,6 +19,8 @@ export abstract class Transport {
         }
     }
 
+    public init() {}
+
     public close(): void {}
 
     protected abstract pass(message: string, messageConfig?: any): Promise<any> | void;

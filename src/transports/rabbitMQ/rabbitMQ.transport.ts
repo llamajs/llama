@@ -13,6 +13,12 @@ export class RabbitMqTransport extends Transport {
         this.configure(config);
     }
 
+    init(): Promise<amqp.Connection> {
+        if (!this.amqpConnection) return this.connect();
+
+        return Promise.resolve(this.amqpConnection);
+    }
+
     private async connect() {
         const connection = await amqp.connect(
             `amqp://${this.config.username}:${this.config.password}@${this.config.host}`);

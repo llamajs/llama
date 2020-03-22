@@ -9,6 +9,16 @@ export class Logger {
         this.configure(config || defaultLoggerConfig);
     }
 
+    public init() {
+        return this.initTransports();
+    }
+
+    private initTransports() {
+        const transportInitPromises = this.config.transports.map(transport => transport.init());
+        
+        return Promise.all(transportInitPromises);
+    }
+
     public configure(config: LoggerConfig) {
         if (this.isConfigValid(config)) {
             this.config = config;
