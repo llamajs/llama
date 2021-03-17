@@ -16,12 +16,12 @@ class TransportMock extends Transport {
 
 const validMessage: LogMessage = {
     name: 'valid',
-    severity: syslogSeverityLevels.Alert,
+    severity: syslogSeverityLevels[6],
 };
 
 const invalidMessage: LogMessage = {
     name: 'invalid',
-    severity: IbmTivoliSeverityLevels.Clear,
+    severity: IbmTivoliSeverityLevels[0],
 };
 
 describe('Transport Module', function () {

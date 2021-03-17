@@ -17,8 +17,8 @@ const fileTransportConfigNewLine: FileTransportConfig = {
     noNewLine: false,
     format: new CsvFormat(),
     levels: [
-        syslogSeverityLevels.Alert,
-        syslogSeverityLevels.Informational,
+        syslogSeverityLevels[6],
+        syslogSeverityLevels[1],
     ],
 };
 
@@ -27,24 +27,24 @@ const fileTransportConfigNoNewLine: FileTransportConfig = {
     format: new CsvFormat(),
     noNewLine: true,
     levels: [
-        syslogSeverityLevels.Alert,
-        syslogSeverityLevels.Informational,
+        syslogSeverityLevels[6],
+        syslogSeverityLevels[1],
     ],
 };
 
 const validAlertMessage: LogMessage = {
     name: 'validAlert',
-    severity: syslogSeverityLevels.Alert,
+    severity: syslogSeverityLevels[6],
 };
 
 const validInfoMessage: LogMessage = {
     name: 'validInfo',
-    severity: syslogSeverityLevels.Informational,
+    severity: syslogSeverityLevels[1],
 };
 
 const invalidMessage: LogMessage = {
     name: 'invalid',
-    severity: IbmTivoliSeverityLevels.Clear,
+    severity: IbmTivoliSeverityLevels[0],
 };
 
 describe('File Transport Module', function () {
