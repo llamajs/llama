@@ -24,7 +24,7 @@ export class Logger {
             this.config = config;
         } else {
             throw new Error(`[Invalid Logger Config]:
-                            Transport includes levels that the logger do not have`);
+                            Transport includes levels that the logger does not have`);
         }
     }
 
